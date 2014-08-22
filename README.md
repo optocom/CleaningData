@@ -25,19 +25,20 @@ R Script
    The R script performs the following tasks:
 
 1. Collects the raw data.
-1. Imports the datasets to R.
-1. Merges the training and the test sets to create one data set.
-1. Extracts only the measurements on the mean and standard deviation for each measurement.
+1. Imports and merges the training and the test sets to create one data set.
+1. Extracts only the measurements on the mean and standard deviation for each measurement; Appropriately labels the data set with descriptive variable names.
 1. Uses descriptive activity names to name the activities in the data set.
-1. Appropriately labels the data set with descriptive variable names.
+1. Stores the variable names for use in code book.
+1. Loads the necessary library.
 1. Generates a tidy data set for calculating the average of each variable for each activity and each subject.
+1. Computes the averages by using the tidy dataset.
 1. Creates a second, independent tidy data set from the output of the previous step.
 
 #### :one: Collecting Data and Setting Up Directory
 
    `download.file` is used to download the data file from the given URL. The zip was unzipped (`unzip`) to the same directory and the working directory was set to the folder _UCI HAR Dataset_.
 
-#### :two: Merging Datasets
+#### :two: Importing and Merging Datasets
 
    `read.table` were used to read the datasets.
 
@@ -45,11 +46,11 @@ R Script
 
    The variable or data frame _x_ contains the complete data set. The column names were added to the variable _x_.
 
-#### :three: Extracting Mean and Standard Deviation from Features
+#### :three: Extracting Mean and Standard Deviation from Features and Adding to Dataset
 
    `grep` with the regexp pattern was used to find the locations in the variable _features_. The result was stored in the variable _xFound_. The column names were added to the variable _xFound_.
 
-#### :four: Adding Conditional Columns to Dataset
+#### :four: Adding Condition Columns to Dataset
 
    `cbind` was used to add columns to the variable _xFound_.
 
@@ -65,12 +66,12 @@ R Script
 
    `melt` was used to create the tidy data.
 
-#### :eight: Computing the Data
+#### :eight: Computing the Averages
 
-   `dcast` was used to calculate the average from the tidy dataset.
+   `dcast` was used to calculate the averages from the tidy dataset. The result is a data frame with values in multiple columns.
 
 #### :nine: Preparing the Final Output
 
-   `melt` was used again to create the second tidy data.
+   `melt` was used again to create the second tidy data. The average data is in one column.
 
 :smile:
