@@ -33,11 +33,11 @@ R Script
 1. Generates a tidy data set for calculating the average of each variable for each activity and each subject.
 1. Creates a second, independent tidy data set from the output of the previous step.
 
-#### :one:Collecting Data and Setting Up Directory
+#### :one: Collecting Data and Setting Up Directory
 
    `download.file` is used to download the data file from the given URL. The zip was unzipped (`unzip`) to the same directory and the working directory was set to the folder _UCI HAR Dataset_.
 
-#### :two:Merging Datasets
+#### :two: Merging Datasets
 
    `read.table` were used to read the datasets.
 
@@ -45,31 +45,31 @@ R Script
 
    The variable or data frame _x_ contains the complete data set. The column names were added to the variable _x_.
 
-#### :three:Extracting Mean and Standard Deviation from Features
+#### :three: Extracting Mean and Standard Deviation from Features
 
    `grep` with the regexp pattern was used to find the locations in the variable _features_. The result was stored in the variable _xFound_. The column names were added to the variable _xFound_.
 
-#### :four:Adding Conditional Columns to Dataset
+#### :four: Adding Conditional Columns to Dataset
 
    `cbind` was used to add columns to the variable _xFound_.
 
-#### :five:Save Variable Names for CodeBook
+#### :five: Save Variable Names for CodeBook
 
    `write.table` was used to save the variable names to a file, which will be used for the CodeBook. The output is a file having an integer column plus a character column.
 
-#### :six:Loading the Library
+#### :six: Loading the Library
 
    _reshape2_ was loaded to create the tidy dataset.
 
-#### :seven:Creating Tidy Dataset
+#### :seven: Creating Tidy Dataset
 
    `melt` was used to create the tidy data.
 
-#### :eight:Computing the Data
+#### :eight: Computing the Data
 
    `dcast` was used to calculate the average from the tidy dataset.
 
-#### :nine:Preparing the Final Output
+#### :nine: Preparing the Final Output
 
    `melt` was used again to create the second tidy data.
 
