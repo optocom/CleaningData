@@ -68,9 +68,9 @@ Data Processing
 
 The training and the test sets (for example, files *X_train.txt* and *X_test.txt*) were merged to create one data set. The descriptive names of the variables from file _features.txt_ were added to the column names of the data.
 
-Only the measurements on the mean and standard deviation for each measurement were extracted, _i.e._, mean(), std() and meanFreq() from the above list of variables.
+Only the measurements on the mean and standard deviation for each measurement were extracted, _i.e._, mean(), std() and meanFreq(), from the above list of variables.
 
-The descriptive activity names, e.g., WALKING, etc, were added to the dataset.
+The descriptive activity names, _e.g._, WALKING, etc, were added to the dataset.
 
 The data was transformed to a tidy dataset. The average of each variable for each activity and each subject was calculated.
 
