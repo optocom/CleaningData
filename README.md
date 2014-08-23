@@ -44,15 +44,15 @@ R Script
 
    `rbind` was used to append the test dataset to the training dataset to create complete datasets. The datasets were saved to files in folder _all_.
 
-   The variable or data frame _x_ contains the complete data set. The column names were added to the variable _x_.
+   The variable or data frame _x_ contains the complete dataset. The column names from _features_ were added to the data frame _x_.
 
 #### :three: Extracting Mean and Standard Deviation from Features and Adding to Dataset
 
-   `grep` with the regexp pattern was used to find the locations in the variable _features_. The result was stored in the variable _xFound_. The column names were added to the variable _xFound_.
+   `grep` with the regexp pattern was used to find the locations of the means and the standard deviations in the variable _features_. The locations or indexes were stored in variable _found_. The results were extracted from variable _x_ by using the indexes _found_ and stored in the data frame _xFound_. The column names from _features_ with indexes _found_ were added to _xFound_.
 
 #### :four: Adding Condition Columns to Dataset
 
-   `cbind` was used to add columns to the variable _xFound_.
+   `cbind` was used to add columns _activity_ and _subject_ to the variable _xFound_. The descriptive names of the activity were obtained from variable *activity_label*.
 
 #### :five: Save Variable Names for CodeBook
 
@@ -60,18 +60,23 @@ R Script
 
 #### :six: Loading the Library
 
-   _reshape2_ was loaded to create the tidy dataset.
+   _reshape2_ was loaded to create the tidy dataset and to calculate the averages.
 
 #### :seven: Creating Tidy Dataset
 
-   `melt` was used to create the tidy data.
+   `melt` was used to create the tidy data _xFoundMelt_.
 
 #### :eight: Computing the Averages
 
-   `dcast` was used to calculate the averages from the tidy dataset. The result is a data frame with values in multiple columns.
+   `dcast` was used to calculate the averages from the tidy dataset. The results in data frame _avg_ have values in multiple columns.
 
 #### :nine: Preparing the Final Output
 
-   `melt` was used again to create the second tidy data. The average data is in one column.
+   `melt` was used again to create the second tidy data _avgMelt_, which was saved to file _average.txt_ without row names. The columns of the data are as follows:
+
+   1. Activity
+   1. Subject
+   1. Variable
+   1. Value
 
 :smile:
