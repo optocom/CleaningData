@@ -121,7 +121,8 @@ xFoundMelt <- melt(xFound, id.vars=c("activity", "subject"), measure.vars=featur
 avg <- dcast(xFoundMelt, activity + subject ~ variable, mean)
 
 # Use melt to form a tidy dataset of the average
-avgMelt <- melt(avg, id.vars=c("activity", "subject"), measure.vars=features[found])
+# avgMelt <- melt(avg, id.vars=c("activity", "subject"), measure.vars=features[found])
 
 # Write the output to a file "average.txt" without row.name, using default sep
-write.table(avgMelt, file="average.txt", row.name=FALSE)
+write.table(avg, file="average.txt", row.name=FALSE)
+#write.table(avgMelt, file="average.txt", row.name=FALSE)
