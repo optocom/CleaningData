@@ -70,7 +70,7 @@ R Script
 
    `dcast` was used to calculate the averages from the tidy dataset. The results in data frame _avg_ have values in multiple columns.
 
-## (ignore the following paragraph)
+##### (ignore the following paragraph)
 #### :nine: Preparing the Final Output
 
    `melt` was used again to create the second tidy data _avgMelt_, which was saved to file _average.txt_ without row names. The columns of the data are as follows:

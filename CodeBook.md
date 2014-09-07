@@ -1,7 +1,7 @@
 Code Book
 =========
 
-The data of a zip file of this project is from [**this link**](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip).
+The data of a zip file of this project is from [*https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip*](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip).
 
 Data Collection
 ---------------
@@ -78,16 +78,6 @@ The data was transformed to a tidy dataset. The average of each variable for eac
 
 The second tidy dataset was generated from the above calculation of the averages and saved to file *average.txt*
 
-Output Data Format
-------------------
-
-The first row is the column names. There are four columns separated by a space:
-
-1. Activity: character
-2. Subject: integer from 1 to 30
-3. Variable: character
-4. Value: numeric
-
 List Of Activities
 ------------------
 
@@ -98,9 +88,13 @@ List Of Activities
 * STANDING
 * LAYING
 
-List Of Variables
------------------
+Output Data Format
+------------------
 
+The first row is the column names. There are 81 columns separated by a space:
+
+1. Activity: character
+2. Subject: integer from 1 to 30
 1.	tBodyAcc-mean()-X
 2.	tBodyAcc-mean()-Y
 3.	tBodyAcc-mean()-Z
